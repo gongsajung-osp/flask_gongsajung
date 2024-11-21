@@ -1,0 +1,14 @@
+{% extends 'index.html' %}
+
+{% block section %}
+<p>
+    review title is <b>{{ data.title }}</b> and rate is {{data.rate}} points out of 5 points
+</p>
+
+<img src="{{ url_for('static', filename='images/' + data.img_path) }}" alt="Review Image" height="200">
+
+<p>
+    {{ data.review }}
+</p>
+
+{% endblock section %}
